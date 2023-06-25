@@ -6,6 +6,12 @@ const recipes = {
 
 function showRecipe(drink) {
     const recipeElement = document.getElementById('recipe');
+    const modal = document.getElementById('recipeModal');
     recipeElement.innerHTML = recipes[drink];
-    recipeElement.classList.add('active');
+    modal.classList.remove('hidden');
+}
+
+function closeModal() {
+    const modal = document.getElementById('recipeModal');
+    modal.classList.add('hidden');
 }

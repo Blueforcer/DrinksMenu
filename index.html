@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #background-video {
+            filter: blur(5px);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            object-fit: cover;
+  height: 100%;
+            z-index: -100;
+            transform: translate(-50%, -50%);
+        }
+    </style>
     <title>Getränkekarte</title>
 </head>
-<body class="bg-gray-50 min-h-screen flex my-10  justify-center">
+<body class="min-h-screen flex my-10 justify-center bg-transparent">
 
-    <div class="max-w-2xl w-full mx-4">
-        <h1 class="text-3xl font-semibold mb-4 text-center text-gray-800">Getränkekarte</h1>
+    <!-- Background Video -->
+    <video id="background-video" autoplay loop muted>
+        <source src="background.webm" type="video/webm">
+    </video>
+
+    <div class="max-w-2xl w-full mx-4 z-10">
+        <h1 class="text-5xl font-semibold  text-center text-gray-800">Back in Town</h1>
+        <h1 class="text-2xl font-semibold mb-4 text-center text-gray-800">Getränkekarte</h1>
         <div class="menu bg-white rounded-lg shadow-md overflow-hidden">
             <ul class="max-h-60 overflow-y-auto divide-y divide-gray-200">
                 <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('mojito')">Mojito</li>
@@ -17,8 +36,16 @@
                 <!-- Weitere Getränke hier -->
             </ul>
         </div>
-        <div id="recipe" class="recipe mt-6 p-5 bg-white rounded-lg shadow-md"></div>
     </div>
+    
+    <!-- Modal -->
+    <div id="recipeModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-20">
+        <div class="bg-white rounded-lg p-8 relative">
+            <span class="absolute top-4 right-4 text-2xl cursor-pointer" onclick="closeModal()">&times;</span>
+            <div id="recipe" class="recipe"></div>
+        </div>
+    </div>
+    
     <script src="scripts.js"></script>
 </body>
 </html>
