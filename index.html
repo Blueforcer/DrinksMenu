@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        #background-video {
-            filter: blur(5px);
+
+body::before {
+            content: "";
+            background-image: url('background.jpg');
+            filter: blur(10px);
             position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            object-fit: cover;
-            height: 100%;
-            z-index: -100;
-            transform: translate(-50%, -50%);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .menu ul li:nth-child(even) {
+            background-color: #eeeeeebe; /* Graue Farbe für jeden zweiten Eintrag */
         }
     </style>
     <title>Getränkekarte</title>
@@ -23,39 +28,43 @@
 
 <body class="min-h-screen flex justify-center bg-transparent">
 
-    <!-- Background Video -->
-    <video id="background-video" autoplay loop muted playsinline>
-        <source src="background.webm" type="video/webm">
-    </video>
 
     <div class="max-w-2xl w-full mx-4 z-10">
         <h1 class="text-5xl font-semibold mt-4 text-center text-gray-800">Back in Town</h1>
         <h1 class="text-2xl font-semibold mb-4 text-center text-gray-800">Getränkekarte</h1>
         <div class="menu bg-white rounded-lg shadow-md overflow-hidden">
-            <ul class="max-h-max	 overflow-y-auto  divide-gray-200">
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('mojito')">Gin Tonic</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Cubra Libre</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Aperol Spritz</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Aperols Spritz Alkoholfrei</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Hugo</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Hugo Alkoholfrei</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Bacardi Razz mit Sprite</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Malibu Maracuja</li>
+            <ul class="max-h-max overflow-y-auto divide-gray-200">
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('gintonic')">Gin Tonic</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('cubalibre')">Cubra Libre</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol1')">Aperol Spritz</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol2')">Aperols Spritz
+                    Alkoholfrei</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('hugo')">Hugo</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('hugo2')">Hugo Alkoholfrei
+                </li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Bacardi Razz mit
+                    Sprite</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Malibu Maracuja
+                </li>
                 <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Bier</li>
                 <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Radler</li>
                 <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Sekt</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Alkoholfreies Bier</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Alkoholfreier Sekt</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Alkoholfreies Bier
+                </li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Alkoholfreier Sekt
+                </li>
                 <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Softdrinks</li>
                 <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Säfte</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Wasser still/sprudel</li>
-                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Kindeteistee (Zuckerfrei Frio)</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Wasser
+                    still/sprudel</li>
+                <li class="py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('latte')">Kindeteistee
+                    (Zuckerfrei Frio)</li>
             </ul>
         </div>
     </div>
 
     <!-- Modal -->
-    <div id="recipeModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-20">
+    <div id="recipeModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-20 list-disc">
         <div class="bg-white rounded-lg p-8 relative">
             <span class="absolute top-4 right-4 text-2xl cursor-pointer" onclick="closeModal()">&times;</span>
             <div id="recipe" class="recipe"></div>
