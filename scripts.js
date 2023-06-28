@@ -23,6 +23,50 @@ const recipes = {
         ingredients: '<ul><li>Alkoholfreier Sekt</li><li>Holunderblütensirup</li><li>Zitronensaft</li><li>Limette</li><li>Minzzweig</li><li>Eiswürfel</li></ul>',
         image: 'hugo2.png'
     },
+    barcadi:{
+        ingredients: '<ul><li>Bacardi Razz</li><li>Sprite</li><li>Himbeeren</li><li>Eiswürfel</li></ul>',
+        image: 'barcadi.png'
+    },
+    malibu:{
+        ingredients: '<ul><li>Malibu Kokosnusslikör</li><li>Maracujasaft</li><li>Eiswürfel</li></ul>',
+        image: 'malibu.png'
+    },
+    bier:{
+        ingredients: '<ul><li>Wasser</li><li>Hopfen</li><li>Malz</li><li>Hefe</li></ul>',
+        image: 'bier.png'
+    },
+    radler:{
+        ingredients: '<ul><li>Zitronenlimo</li><li>Wasser</li><li>Hopfen</li><li>Malz</li><li>Hefe</li></ul>',
+        image: 'bier.png'
+    },
+    sekt:{
+        ingredients: '<ul><li>Grundwein</li><li>Hefe</li><li>Zucker</li></ul>',
+        image: 'sekt.png'
+    },
+    AlkoholfreiesBier:{
+        ingredients: 'Alkoholfreies Bier ist wie ein BH auf der Wäscheleine. Das beste ist raus.',
+        image: 'bier.png'
+    },
+    AlkoholfreierSekt:{
+        ingredients: '“Ein Sekt bitte!” “Alkoholfrei?” “Nein, lactosefrei” “Wollen Sie mich verarschen?” “Wer hat denn damit angefangen?”',
+        image: 'sekt.png'
+    },
+    softdrinks:{
+        ingredients:'Cola, Fanta, Sprite usw.',
+        image: 'saft.png'
+    },
+    saft:{
+        ingredients: 'Verschiedene Auswahl',
+        image: 'saft.png'
+    },
+    wasser:{
+        ingredients: 'H2O',
+        image: 'wasser.png'
+    },
+    eistee:{
+        ingredients: 'Teekanne frio Eistee',
+        image: 'eistee.png'
+    },
 };
 
 function showRecipe(drink) {
