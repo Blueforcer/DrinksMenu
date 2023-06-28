@@ -37,7 +37,7 @@ const recipes = {
     },
     radler:{
         ingredients: '<ul><li>Zitronenlimo</li><li>Wasser</li><li>Hopfen</li><li>Malz</li><li>Hefe</li></ul>',
-        image: 'radler.jpg'
+        image: 'radler.png'
     },
     sekt:{
         ingredients: '<ul><li>Grundwein</li><li>Hefe</li><li>Zucker</li></ul>',
