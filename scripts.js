@@ -65,7 +65,7 @@ const recipes = {
     },
     eistee:{
         ingredients: 'Teekanne frio Eistee',
-        image: 'eistee.png'
+        image: 'eistee.jpg'
     },
 };
 
