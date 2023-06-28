@@ -60,7 +60,7 @@ const recipes = {
         image: 'saft.jpg'
     },
     wasser:{
-        ingredients: 'H2O',
+        ingredients: 'H²O',
         image: 'wasser.jpg'
     },
     eistee:{
