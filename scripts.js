@@ -53,7 +53,7 @@ const recipes = {
     },
     softdrinks:{
         ingredients:'Cola, Fanta, Sprite usw.',
-        image: 'saft.png'
+        image: 'softdrinks.jpg'
     },
     saft:{
         ingredients: 'Verschiedene Auswahl',
@@ -61,7 +61,7 @@ const recipes = {
     },
     wasser:{
         ingredients: 'H2O',
-        image: 'wasser.png'
+        image: 'wasser.jpg'
     },
     eistee:{
         ingredients: 'Teekanne frio Eistee',
