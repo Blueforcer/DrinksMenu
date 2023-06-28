@@ -57,7 +57,7 @@ const recipes = {
     },
     saft:{
         ingredients: 'Verschiedene Auswahl',
-        image: 'saft.png'
+        image: 'saft.jpg'
     },
     wasser:{
         ingredients: 'H2O',
