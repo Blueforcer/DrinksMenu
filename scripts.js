@@ -29,7 +29,7 @@ const recipes = {
     },
     malibu:{
         ingredients: '<ul><li>Malibu Kokosnusslikör</li><li>Maracujasaft</li><li>Eiswürfel</li></ul>',
-        image: 'malibu.png'
+        image: 'malibu.jpg'
     },
     bier:{
         ingredients: '<ul><li>Wasser</li><li>Hopfen</li><li>Malz</li><li>Hefe</li></ul>',
