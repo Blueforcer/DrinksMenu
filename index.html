@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
-
-body {
-         background-color: rgb(133, 204, 0);
-      }
-
         .menu ul li:nth-child(even) {
             background-color: #eeeeeebe; /* Graue Farbe für jeden zweiten Eintrag */
         }
@@ -20,17 +15,15 @@ body {
 </head>
 
 <body class="min-h-screen flex justify-center bg-transparent">
-
-
     <div class="max-w-2xl w-full mx-4 z-10">
         <h1 class="text-5xl font-semibold mt-4 text-center text-gray-800">Back in Town</h1>
         <h1 class="text-2xl font-semibold mb-4 text-center text-gray-800">Getränkekarte</h1>
-        <div class="menu bg-white rounded-lg shadow-md overflow-hidden">
-            <ul class="max-h-max overflow-y-auto divide-gray-200 opacity-70">
+        <div class="menu bg-white rounded-lg shadow-md overflow-hidden max-h-96 overflow-y-auto">
+            <ul class="divide-gray-200 opacity-70">
                 <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('gintonic')">Gin Tonic</li>
                 <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('cubalibre')">Cubra Libre</li>
                 <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol1')">Aperol Spritz</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol2')">Aperols Spritz
+                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol2')">Aperol Spritz
                     Alkoholfrei</li>
                 <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('hugo')">Hugo</li>
                 <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('hugo2')">Hugo Alkoholfrei
@@ -62,7 +55,6 @@ body {
             <div id="recipe" class="recipe"></div>
         </div>
     </div>
-
     <script src="scripts.js"></script>
 </body>
 
