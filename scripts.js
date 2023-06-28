@@ -25,7 +25,7 @@ const recipes = {
     },
     barcadi:{
         ingredients: '<ul><li>Bacardi Razz</li><li>Sprite</li><li>Himbeeren</li><li>Eiswürfel</li></ul>',
-        image: 'barcadi.png'
+        image: 'barcadi.jpg'
     },
     malibu:{
         ingredients: '<ul><li>Malibu Kokosnusslikör</li><li>Maracujasaft</li><li>Eiswürfel</li></ul>',
@@ -37,11 +37,11 @@ const recipes = {
     },
     radler:{
         ingredients: '<ul><li>Zitronenlimo</li><li>Wasser</li><li>Hopfen</li><li>Malz</li><li>Hefe</li></ul>',
-        image: 'bier.png'
+        image: 'radler.png'
     },
     sekt:{
         ingredients: '<ul><li>Grundwein</li><li>Hefe</li><li>Zucker</li></ul>',
-        image: 'sekt.png'
+        image: 'sekt.jpg'
     },
     AlkoholfreiesBier:{
         ingredients: 'Alkoholfreies Bier ist wie ein BH auf der Wäscheleine. Das beste ist raus.',
@@ -49,7 +49,7 @@ const recipes = {
     },
     AlkoholfreierSekt:{
         ingredients: '“Ein Sekt bitte!” “Alkoholfrei?” “Nein, lactosefrei” “Wollen Sie mich verarschen?” “Wer hat denn damit angefangen?”',
-        image: 'sekt.png'
+        image: 'sekt.jpg'
     },
     softdrinks:{
         ingredients:'Cola, Fanta, Sprite usw.',
