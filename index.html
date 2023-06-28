@@ -8,48 +8,111 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .menu ul li:nth-child(even) {
-            background-color: #eeeeeebe; /* Graue Farbe für jeden zweiten Eintrag */
+            background-color: rgba(238, 238, 238, 0.99);
+            /* Graue Farbe für jeden zweiten Eintrag mit 70% Opazität */
+        }
+
+        .menu ul li {
+            background-color: rgba(255, 255, 255, 0.99);
+            /* Weiß mit 70% Opazität für jeden Listeneintrag */
+        }
+
+        .menu {
+            max-height: 80vh;
+            /* Setzt die maximale Höhe auf 80% der Bildschirmhöhe */
+        }
+
+        h1 {
+            color: white;
+            text-shadow:
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                2px 2px 0 #000;
+        }
+
+        body {
+            background-image: url('background.jpg');
+            /* Setzen Sie die URL Ihres Hintergrundbildes hier ein */
+            background-size: cover;
+            /* Bild wird skaliert, um den gesamten Bereich auszufüllen */
+            background-attachment: fixed;
+            /* Das Bild scrollt nicht mit der Seite */
+            background-position: center;
+            /* Das Bild wird zentriert ausgerichtet */
         }
     </style>
     <title>Getränkekarte</title>
 </head>
 
-<body class="min-h-screen flex justify-center bg-transparent">
+<body class="min-h-screen flex justify-center">
     <div class="max-w-2xl w-full mx-4 z-10">
-        <h1 class="text-5xl font-semibold mt-4 text-center text-gray-800">Back in Town</h1>
-        <h1 class="text-2xl font-semibold mb-4 text-center text-gray-800">Getränkekarte</h1>
-        <div class="menu bg-white rounded-lg shadow-md overflow-hidden max-h-96 overflow-y-auto">
-            <ul class="divide-gray-200 opacity-70">
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('gintonic')">Gin Tonic</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('cubalibre')">Cubra Libre</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol1')">Aperol Spritz</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('aperol2')">Aperol Spritz
+        <h1 class="text-5xl font-semibold mt-4 text-center text-gray-200">Back in Town</h1>
+        <h1 class="text-2xl font-semibold mb-4 text-center text-gray-200">Getränkekarte</h1>
+        <div class="menu bg-transparent rounded-lg shadow-md overflow-hidden overflow-y-auto">
+            <ul class="divide-gray-200 opacity-80">
+                <li class="font-bold text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('gintonic')">Gin
+                    Tonic</li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('cubalibre')">
+                    Cubra Libre</li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('aperol1')">
+                    Aperol Spritz</li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('aperol2')">
+                    Aperol Spritz
                     Alkoholfrei</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('hugo')">Hugo</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('hugo2')">Hugo Alkoholfrei
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('hugo')">Hugo
                 </li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('barcadi')">Bacardi Razz</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('malibu')">Malibu Maracuja
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('hugo2')">Hugo
+                    Alkoholfrei
                 </li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('bier')">Bier</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('radler')">Radler</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('sekt')">Sekt</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('AlkoholfreiesBier')">Alkoholfreies Bier
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('barcadi')">
+                    Bacardi Razz</li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('malibu')">Malibu
+                    Maracuja
                 </li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('AlkoholfreierSekt')">Alkoholfreier Sekt
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('bier')">Bier
                 </li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('softdrinks')">Softdrinks</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('saft')">Säfte</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('wasser')">Wasser
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('radler')">Radler
+                </li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('sekt')">Sekt
+                </li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('AlkoholfreiesBier')">Alkoholfreies Bier
+                </li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('AlkoholfreierSekt')">Alkoholfreier Sekt
+                </li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('softdrinks')">
+                    Softdrinks</li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('saft')">Säfte
+                </li>
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('wasser')">Wasser
                     still/sprudel</li>
-                <li class="text-center py-3 px-5 hover:bg-gray-100 cursor-pointer" onclick="showRecipe('eistee')">Kindeteistee
+                <li class="font-bold	text-center py-3 px-5 hover:bg-gray-100 cursor-pointer"
+                    onclick="showRecipe('eistee')">
+                    Kindeteistee
                     (Zuckerfrei Frio)</li>
             </ul>
         </div>
     </div>
 
     <!-- Modal -->
-    <div id="recipeModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-20 list-disc">
+    <div id="recipeModal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-20 list-disc">
         <div class="bg-white rounded-lg p-8 relative">
             <span class="absolute top-4 right-4 text-2xl cursor-pointer" onclick="closeModal()">&times;</span>
             <div id="recipe" class="recipe"></div>
